@@ -559,7 +559,7 @@ prof_dump_flush(void *opaque, const char *s) {
 		ssize_t err = prof_dump_write_file(arg->prof_dump_fd, s,
 		    strlen(s));
 		prof_dump_check_possible_error(arg, err == -1,
-		    "<jemalloc>: failed to write during heap profile flush\n");
+		    "<jemalloc>: failed to write during heap profile to %s during flush\n", s);
 	}
 }
 
